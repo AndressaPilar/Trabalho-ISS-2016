@@ -40,6 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Pessoas\Endereco.cs" />
+    <Compile Include="Models\Pessoas\Estado.cs" />
+    <Compile Include="Models\Pessoas\EstadoCivil.cs" />
+    <Compile Include="Models\Pessoas\MeioComunicacao.cs" />
+    <Compile Include="Models\Pessoas\Papel.cs" />
+    <Compile Include="Models\Pessoas\Pessoa.cs" />
+    <Compile Include="Models\Pessoas\PessoaFisica.cs" />
+    <Compile Include="Models\Pessoas\PessoaJuridica.cs" />
+    <Compile Include="Models\Produtos\Produto.cs" />
+    <Compile Include="Models\Produtos\Unidade.cs" />
+    <Compile Include="Models\Usuarios\GrupoPermissao.cs" />
+    <Compile Include="Models\Usuarios\Permissao.cs" />
     <Compile Include="Models\Usuarios\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
