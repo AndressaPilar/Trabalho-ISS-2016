@@ -1,0 +1,160 @@
+﻿@model ProjetoArtCouro.Model.Models.Compra.PesquisaCompraModel
+@using ProjetoArtCouro.Resource.Resources
+@using ProjetoArtCouro.Web.Infra.Extensions
+
+<div class="jarviswidget jarviswidget-sortable"
+     data-widget-editbutton="true" data-widget-colorbutton="true"
+     data-widget-fullscreenbutton="true" data-widget-collapsed="true"
+     data-widget-custombutton="true" data-widget-togglebutton="true"
+     data-widget-sortable="true" data-widget-deletebutton="true" role="widget" style="">
+    <header role="heading">
+        <span class="widget-icon"><i class="fa fa-edit"></i></span>
+        <h2>@Mensagens.SearchBuy </h2>
+        <span class="jarviswidget-loader"><i class="fa fa-refresh fa-spin"></i></span>
+        <div class="widget-toolbar">
+            <div class="btn-group help">
+                <a href="javascript:void(0);" id="Ajuda" class="button-icon" rel="tooltip" title="" data-placement="left" data-original-title="Ajuda">
+                    <i class="fa fa-2x fa-question-circle"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div role="content">
+        <div class="widget-body no-padding">
+            <form id="formPesquisaCompra" class="smart-form" novalidate="novalidate">
+                <fieldset class="col col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="row">
+                        <section id="AlertaMensagens" class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 no-margin"></section>
+                    </div>
+                    <div class="row">
+                        <section class="col col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                            @Html.LabelFor(m => m.CodigoCompra, new { @class = "label" })
+                            <label class="input">
+                                @Html.TextBoxFor(m => m.CodigoCompra, new { placeholder = @Mensagens.CodeBuy })
+                            </label>
+                        </section>
+                        <section class="col col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                            @Html.LabelFor(m => m.CodigoFornecedor, new { @class = "label" })
+                            <label class="input">
+                                @Html.TextBoxFor(m => m.CodigoFornecedor, new { placeholder = @Mensagens.ProviderCode })
+                            </label>
+                        </section>
+                        <section class="col col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                            @Html.LabelFor(m => m.DataCadastro, new { @class = "label" })
+                            <label class="input">
+                                @Html.TextBoxFor(m => m.DataCadastro, new { placeholder = @Mensagens.RegistrationDate, @class = "DataMask" })
+                            </label>
+                        </section>
+                        <section class="col col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                            @Html.LabelFor(m => m.StatusId, new { @class = "label" })
+                            <label class="select">
+                                @Html.DropDownListFor(m => m.StatusId, new SelectList(ViewBag.StatusCompra, "Codigo", "Nome")
+                                    .AddDefaultOption(Mensagens.Select))
+                                <i></i>
+                            </label>
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="col col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                            @Html.LabelFor(m => m.NomeFornecedor, new { @class = "label" })
+                            <label class="input">
+                                @Html.TextBoxFor(m => m.NomeFornecedor, new { placeholder = @Mensagens.ProviderName })
+                            </label>
+                        </section>
+                        <section class="col col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                            @Html.LabelFor(m => m.CPFCNPJ, new { @class = "label" })
+                            <label class="input">
+                                @Html.TextBoxFor(m => m.CPFCNPJ, new { placeholder = @Mensagens.CPFCNPJ, @class = "CpfCnpjMask" })
+                            </label>
+                        </section>
+                    </div>
+                </fieldset>
+                <footer>
+                    <a id="PesquisarCompra" class="btn btn-labeled btn-primary" href="javascript:void(0);">
+                        <span class="btn-label"><i class="fa fa-search"></i></span> @Mensagens.Research
+                    </a>
+                    <a id="NovaCompra" class="btn btn-labeled btn-success" href="@Url.Action("NovaCompra", "Compra")">
+                        <span class="btn-label"><i class="fa fa-file-o"></i></span> @Mensagens.New
+                    </a>
+                </footer>
+            </form>
+            <fieldset class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 WidgetCompra ScrollWidgetTable">
+                <div class="jarviswidget jarviswidget-color-blueDark" data-widget-fullscreenbutton="false"
+                     data-widget-colorbutton="false" data-widget-togglebutton="false"
+                     data-widget-deletebutton="false" data-widget-editbutton="false">
+                    <header>
+                        <span class="widget-icon"> <i class="fa fa-table"></i> </span>
+                        <h2>Tabela de Compras</h2>
+                    </header>
+                    <div class="ScrollTableContent">
+                        <div class="widget-body no-padding">
+                            <table id="datatableCompra" class="table table-striped table-bordered table-hover" width="100%"></table>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/app/Search.js"></script>
+    <script src="~/js/app/Compra/Compra.js"></script>
+    <script>
+        Portal.Mask();
+        Portal.Search({
+            AlertaMensagensSeletor: "#AlertaMensagens",
+            BotaoPesquisarSeletor: "#PesquisarCompra",
+            FormularioSeletor: "#formPesquisaCompra",
+            UrlDados: "@Url.Action("PesquisaCompra", "Compra")",
+            TabelaSeletor: "#datatableCompra",
+            WidgetSeletor: ".WidgetCompra",
+            TituloRodape: "Compras",
+            InformacaoTabela: "Informe os filtros para pesquisar",
+            TituloRodapeContador: "Nenhuma compra",
+            OrdenacaoDoCabecalho: [
+                { "sTitle": "@(Mensagens.CodeBuy)", "mData": "CodigoCompra", "sWidth": "10%" },
+                {
+                    "sTitle": "@(Mensagens.ProviderCode)",
+                    "mData": null,
+                    "sWidth": "10%",
+                    "mRender": function (obj) {
+                        return obj.FornecedorId == null ? "N/I" : obj.FornecedorId;
+                    }
+                },
+                {
+                    "sTitle": "@(Mensagens.ProviderName)",
+                    "mData": null,
+                    "sWidth": "40%",
+                    "mRender": function (obj) {
+                        return obj.NomeFornecedor == null ? "N/I" : obj.NomeFornecedor;
+                    }
+                },
+                {
+                    "sTitle": "@(Mensagens.CPFCNPJ)",
+                    "mData": null,
+                    "sWidth": "10%",
+                    "mRender": function (obj) {
+                        return obj.CPFCNPJ == null ? "N/I" : obj.CPFCNPJ;
+                    }
+                },
+                { "sTitle": "@(Mensagens.RegistrationDate)", "mData": "DataCadastro", "sWidth": "10%" },
+                { "sTitle": "@(Mensagens.Status)", "mData": "StatusCompra", "sWidth": "10%" },
+                {
+                    "sTitle": "@(Mensagens.Actions)",
+                    "mData": null,
+                    "sClass": "center",
+                    "bSortable": false,
+                    "sWidth": "10%",
+                    "mRender": function (obj) {
+                        var url = "/Compra/EditarCompra" + "?codigoCompra=" + obj.CodigoCompra;
+                        var botoes = Portal.CriarBotoes(url,
+                            "Portal.ExcluirCompra(\"/Compra/ExcluirCompra\",{CodigoCompra: " + obj.CodigoCompra + ", StatusCompra: '" + obj.StatusCompra + "'}, \"#datatableCompra\", $(this).closest(\"tr\"))");
+                        return botoes[0].outerHTML;
+                    }
+                }
+            ]
+        });
+        Portal.HabilitarAjudaPesquisaCompra();
+    </script>
+}
