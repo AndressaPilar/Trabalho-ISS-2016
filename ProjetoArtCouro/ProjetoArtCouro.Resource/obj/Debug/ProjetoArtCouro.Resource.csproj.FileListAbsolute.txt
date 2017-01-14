@@ -1,0 +1,7 @@
+C:\Users\Andressa Karla\Source\Repos\Trabalho-ISS-2016\ProjetoArtCouro\ProjetoArtCouro.Resource\bin\Debug\ProjetoArtCouro.Resource.dll
+C:\Users\Andressa Karla\Source\Repos\Trabalho-ISS-2016\ProjetoArtCouro\ProjetoArtCouro.Resource\bin\Debug\ProjetoArtCouro.Resource.pdb
+C:\Users\Andressa Karla\Source\Repos\Trabalho-ISS-2016\ProjetoArtCouro\ProjetoArtCouro.Resource\obj\Debug\ProjetoArtCouro.Resource.Resources.Erros.resources
+C:\Users\Andressa Karla\Source\Repos\Trabalho-ISS-2016\ProjetoArtCouro\ProjetoArtCouro.Resource\obj\Debug\ProjetoArtCouro.Resource.Resources.Mensagens.resources
+C:\Users\Andressa Karla\Source\Repos\Trabalho-ISS-2016\ProjetoArtCouro\ProjetoArtCouro.Resource\obj\Debug\ProjetoArtCouro.Resource.csproj.GenerateResource.Cache
+C:\Users\Andressa Karla\Source\Repos\Trabalho-ISS-2016\ProjetoArtCouro\ProjetoArtCouro.Resource\obj\Debug\ProjetoArtCouro.Resource.dll
+C:\Users\Andressa Karla\Source\Repos\Trabalho-ISS-2016\ProjetoArtCouro\ProjetoArtCouro.Resource\obj\Debug\ProjetoArtCouro.Resource.pdb
