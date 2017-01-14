@@ -42,6 +42,14 @@
   <ItemGroup>
     <Compile Include="AutoMapper\MeioComunicacaoConverter.cs" />
     <Compile Include="Controllers\ContaReceberController.cs" />
+    <Compile Include="Controllers\Estoques\EstoqueController.cs" />
+    <Compile Include="Controllers\Pagamentos\CondicaoPagamentoController.cs" />
+    <Compile Include="Controllers\Pessoas\ClienteController.cs" />
+    <Compile Include="Controllers\Pessoas\FornecedorController.cs" />
+    <Compile Include="Controllers\Pessoas\FuncionarioController.cs" />
+    <Compile Include="Controllers\Pessoas\PessoaController.cs" />
+    <Compile Include="Controllers\Produtos\ProdutoController.cs" />
+    <Compile Include="Controllers\Vendas\VendaController.cs" />
     <Compile Include="Pessoas\ClienteController.cs" />
     <Compile Include="Pessoas\PessoaController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

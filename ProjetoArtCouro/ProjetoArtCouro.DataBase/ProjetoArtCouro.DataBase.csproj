@@ -56,6 +56,7 @@
     <Compile Include="EntityConfig\UsuarioConfiguration\PermissaoConfiguration.cs" />
     <Compile Include="EntityConfig\UsuarioConfiguration\UsuarioConfiguration.cs" />
     <Compile Include="EntityConfig\VendaConfiguration\ContaReceberConfiguration.cs" />
+    <Compile Include="EntityConfig\VendaConfiguration\ItemVendaConfiguration.cs" />
     <Compile Include="EntityConfig\VendaConfiguration\VendaConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorios\CompraRepository\ContaPagarRepository.cs" />
@@ -64,11 +65,13 @@
     <Compile Include="Repositorios\PagamentoRepository\FormaPagamentoRepository.cs" />
     <Compile Include="Repositorios\PessoaRepository\EnderecoRepository.cs" />
     <Compile Include="Repositorios\PessoaRepository\MeioComunicacaoRepository.cs" />
+    <Compile Include="Repositorios\PessoaRepository\PapelRepository.cs" />
     <Compile Include="Repositorios\PessoaRepository\PessoaJuridicaRepository.cs" />
     <Compile Include="Repositorios\PessoaRepository\PessoaRepository.cs" />
     <Compile Include="Repositorios\ProdutoRepository\ProdutoRepository.cs" />
     <Compile Include="Repositorios\ProdutoRepository\UnidadeRepository.cs" />
     <Compile Include="Repositorios\UsuarioRepository\UsuarioRepository.cs" />
+    <Compile Include="Repositorios\VendaRepository\ItemVendaRepository.cs" />
     <Compile Include="Repositorios\VendaRepository\VendaRepository.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

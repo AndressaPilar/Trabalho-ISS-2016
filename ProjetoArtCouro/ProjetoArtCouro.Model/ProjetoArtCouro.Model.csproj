@@ -42,15 +42,22 @@
   <ItemGroup>
     <Compile Include="Models\Cliente\ClienteModel.cs" />
     <Compile Include="Models\Cliente\PesquisaClienteModel.cs" />
+    <Compile Include="Models\CondicaoPagamento\CondicaoPagamentoModel.cs" />
     <Compile Include="Models\ContaPagar\ContaPagarModel.cs" />
     <Compile Include="Models\ContaPagar\PesquisaContaPagarModel.cs" />
     <Compile Include="Models\ContaReceber\ContaReceberModel.cs" />
     <Compile Include="Models\ContaReceber\PesquisaContaReceberModel.cs" />
     <Compile Include="Models\FormaPagamento\FormaPagamentoModel.cs" />
+    <Compile Include="Models\Fornecedor\FornecedorModel.cs" />
+    <Compile Include="Models\Fornecedor\PesquisaFornecedorModel.cs" />
     <Compile Include="Models\Login\LoginModel.cs" />
+    <Compile Include="Models\Produto\ProdutoModel.cs" />
     <Compile Include="Models\Usuario\ConfiguracaoUsuarioModel.cs" />
     <Compile Include="Models\Usuario\PesquisaUsuarioModel.cs" />
     <Compile Include="Models\Usuario\UsuarioModel.cs" />
+    <Compile Include="Models\Venda\ItemVendaModel.cs" />
+    <Compile Include="Models\Venda\PesquisaVendaModel.cs" />
+    <Compile Include="Models\Venda\VendaModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
