@@ -40,16 +40,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Infra\DataAnnotation\CNPJValidationAttribute.cs" />
+    <Compile Include="Infra\DataAnnotation\CPFValidationAttribute.cs" />
     <Compile Include="Models\Cliente\ClienteModel.cs" />
     <Compile Include="Models\Cliente\PesquisaClienteModel.cs" />
+    <Compile Include="Models\Common\LookupModel.cs" />
+    <Compile Include="Models\Common\RetornoBase.cs" />
+    <Compile Include="Models\Compra\CompraModel.cs" />
+    <Compile Include="Models\Compra\ItemCompraModel.cs" />
+    <Compile Include="Models\Compra\PesquisaCompraModel.cs" />
     <Compile Include="Models\CondicaoPagamento\CondicaoPagamentoModel.cs" />
     <Compile Include="Models\ContaPagar\ContaPagarModel.cs" />
     <Compile Include="Models\ContaPagar\PesquisaContaPagarModel.cs" />
     <Compile Include="Models\ContaReceber\ContaReceberModel.cs" />
     <Compile Include="Models\ContaReceber\PesquisaContaReceberModel.cs" />
+    <Compile Include="Models\Estoque\EstoqueModel.cs" />
+    <Compile Include="Models\Estoque\PesquisaEstoqueModel.cs" />
     <Compile Include="Models\FormaPagamento\FormaPagamentoModel.cs" />
     <Compile Include="Models\Fornecedor\FornecedorModel.cs" />
     <Compile Include="Models\Fornecedor\PesquisaFornecedorModel.cs" />
+    <Compile Include="Models\Funcionario\FuncionarioModel.cs" />
+    <Compile Include="Models\Funcionario\PesquisaFuncionarioModel.cs" />
     <Compile Include="Models\Login\LoginModel.cs" />
     <Compile Include="Models\Produto\ProdutoModel.cs" />
     <Compile Include="Models\Usuario\ConfiguracaoUsuarioModel.cs" />
@@ -58,7 +69,19 @@
     <Compile Include="Models\Venda\ItemVendaModel.cs" />
     <Compile Include="Models\Venda\PesquisaVendaModel.cs" />
     <Compile Include="Models\Venda\VendaModel.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
