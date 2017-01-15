@@ -71,6 +71,7 @@
   <ItemGroup>
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="obj\Debug\TempPE\Resources.Erros.Designer.cs.dll" />
