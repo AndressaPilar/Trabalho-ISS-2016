@@ -103,7 +103,7 @@ namespace ProjetoArtCouro.Test.TesteApiContaPagar
         [TestMethod]
         public void TestePagarContasSemCodigoContaPagar()
         {
-            _mockContaPagarRepository.Setup(x => x.ObterPorCodigoComCompra(1)).Returns(new ContaPagar{Compra = new Compra()});
+            _mockContaPagarRepository.Setup(x => x.ObterPorCodigoComCompra(1)).Returns(new ContaPagar { Compra = new Compra() });
             _mockContaPagarRepository.Setup(x => x.Atualizar(new ContaPagar()));
             var controller = CreateContaPagarController(_mockContaPagarRepository);
             var response = controller.PagarConta(new List<ContaPagarModel>
@@ -119,28 +119,6 @@ namespace ProjetoArtCouro.Test.TesteApiContaPagar
             Assert.AreNotEqual(null, data.Result.ObjetoRetorno);
             Assert.AreEqual(true, data.Result.TemErros);
             Assert.AreEqual(Erros.ThereAccountPayableWithCodeZero, data.Result.Mensagem);
-        }
-
-        [TestMethod]
-        public void TestePagarContasComCodigoContaPagar()
-        {
-            _mockContaPagarRepository.Setup(x => x.ObterPorCodigoComCompra(1)).Returns(new ContaPagar { Compra = new Compra() });
-            _mockContaPagarRepository.Setup(x => x.Atualizar(new ContaPagar()));
-            var controller = CreateContaPagarController(_mockContaPagarRepository);
-            var response = controller.PagarConta(new List<ContaPagarModel>
-            {
-                new ContaPagarModel
-                {
-                    CodigoContaPagar = 1,
-                    Pago = true,
-                    Status = "Aberto"
-                }
-            });
-            var data = response.Result.Content.ReadAsAsync<RetornoBase<object>>();
-            Assert.AreEqual(HttpStatusCode.OK, response.Result.StatusCode);
-            Assert.AreEqual(null, data.Result.ObjetoRetorno);
-            Assert.AreEqual(false, data.Result.TemErros);
-            Assert.AreEqual(Mensagens.ReturnSuccess, data.Result.Mensagem);
         }
     }
 }
