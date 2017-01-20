@@ -370,5 +370,122 @@ namespace ProjetoArtCouro.Test.TesteApiCompra
             Assert.AreEqual(true, data.Result.TemErros);
             Assert.AreEqual(string.Format(Erros.NotZeroParameter, "ValorLiquido"), data.Result.Mensagem);
         }
+
+        [TestMethod]
+        public void TesteCriarCompraComStatusDiferenteDeAberto()
+        {
+            var controller = CreateCompraController();
+            var response = controller.CriarCompra(new CompraModel()
+            {
+                StatusCompra = "Confirmado",
+                DataCadastro = string.Format("{0:dd/MM/yyyy H:mm}", DateTime.Now),
+                ValorTotalBruto = "R$ 2,05",
+                ValorTotalLiquido = "R$ 2,05",
+                FornecedorId = 1,
+                FormaPagamentoId = 1,
+                CondicaoPagamentoId = 1,
+                ItemCompraModel = new List<ItemCompraModel>
+                {
+                    new ItemCompraModel
+                    {
+                        Codigo = 1,
+                        Descricao = "sdasd",
+                        Quantidade = 1,
+                        PrecoVenda = "R$ 22,00",
+                        ValorBruto = "R$ 30,00",
+                        ValorLiquido = "R$ 30,00"
+                    }
+                }
+            });
+            var data = response.Result.Content.ReadAsAsync<RetornoBase<Exception>>();
+            Assert.AreEqual(HttpStatusCode.BadRequest, response.Result.StatusCode);
+            Assert.AreNotEqual(null, data.Result.ObjetoRetorno);
+            Assert.AreEqual(true, data.Result.TemErros);
+            Assert.AreEqual(Erros.StatusOfDifferentPurchasingOpen, data.Result.Mensagem);
+        }
+
+        [TestMethod]
+        public void TesteCriarCompraComSomaValorBrutoDiferenteValorTotalBruto()
+        {
+            var controller = CreateCompraController();
+            var response = controller.CriarCompra(new CompraModel()
+            {
+                StatusCompra = "Aberto",
+                DataCadastro = string.Format("{0:dd/MM/yyyy H:mm}", DateTime.Now),
+                ValorTotalBruto = "R$ 2,05",
+                ValorTotalLiquido = "R$ 60,00",
+                FornecedorId = 1,
+                FormaPagamentoId = 1,
+                CondicaoPagamentoId = 1,
+                ItemCompraModel = new List<ItemCompraModel>
+                {
+                    new ItemCompraModel
+                    {
+                        Codigo = 1,
+                        Descricao = "sdasd",
+                        Quantidade = 1,
+                        PrecoVenda = "R$ 22,00",
+                        ValorBruto = "R$ 30,00",
+                        ValorLiquido = "R$ 30,00"
+                    },
+                    new ItemCompraModel
+                    {
+                        Codigo = 1,
+                        Descricao = "sdasd",
+                        Quantidade = 1,
+                        PrecoVenda = "R$ 22,00",
+                        ValorBruto = "R$ 30,00",
+                        ValorLiquido = "R$ 30,00"
+                    }
+                }
+            });
+            var data = response.Result.Content.ReadAsAsync<RetornoBase<Exception>>();
+            Assert.AreEqual(HttpStatusCode.BadRequest, response.Result.StatusCode);
+            Assert.AreNotEqual(null, data.Result.ObjetoRetorno);
+            Assert.AreEqual(true, data.Result.TemErros);
+            Assert.AreEqual(Erros.SumDoNotMatchTotalCrudeValue, data.Result.Mensagem);
+        }
+
+        [TestMethod]
+        public void TesteCriarCompraComSomaValorLiquidoDiferenteValorTotalLiquido()
+        {
+            var controller = CreateCompraController();
+            var response = controller.CriarCompra(new CompraModel()
+            {
+                StatusCompra = "Aberto",
+                DataCadastro = string.Format("{0:dd/MM/yyyy H:mm}", DateTime.Now),
+                ValorTotalBruto = "R$ 60,00",
+                ValorTotalLiquido = "R$ 2,05",
+                FornecedorId = 1,
+                FormaPagamentoId = 1,
+                CondicaoPagamentoId = 1,
+                ItemCompraModel = new List<ItemCompraModel>
+                {
+                    new ItemCompraModel
+                    {
+                        Codigo = 1,
+                        Descricao = "sdasd",
+                        Quantidade = 1,
+                        PrecoVenda = "R$ 22,00",
+                        ValorBruto = "R$ 30,00",
+                        ValorLiquido = "R$ 30,00"
+                    },
+                    new ItemCompraModel
+                    {
+                        Codigo = 1,
+                        Descricao = "sdasd",
+                        Quantidade = 1,
+                        PrecoVenda = "R$ 22,00",
+                        ValorBruto = "R$ 30,00",
+                        ValorLiquido = "R$ 30,00"
+                    }
+                }
+            });
+            var data = response.Result.Content.ReadAsAsync<RetornoBase<Exception>>();
+            Assert.AreEqual(HttpStatusCode.BadRequest, response.Result.StatusCode);
+            Assert.AreNotEqual(null, data.Result.ObjetoRetorno);
+            Assert.AreEqual(true, data.Result.TemErros);
+            Assert.AreEqual(Erros.SumDoNotMatchTotalValueLiquid, data.Result.Mensagem);
+        }
     }
 }
