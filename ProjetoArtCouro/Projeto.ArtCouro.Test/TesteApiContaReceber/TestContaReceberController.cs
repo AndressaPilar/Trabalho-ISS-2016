@@ -98,5 +98,48 @@ namespace ProjetoArtCouro.Test.TesteApiContaReceber
             Assert.AreEqual(false, data.Result.TemErros);
             Assert.AreEqual(Mensagens.ReturnSuccess, data.Result.Mensagem);
         }
+
+        [TestMethod]
+        public void TesteReceberContasSemCodigoContaReceberCodigo()
+        {
+            _mockContaReceberRepository.Setup(x => x.ObterPorCodigoComVenda(1)).Returns(new ContaReceber { Venda = new Venda() });
+            _mockContaReceberRepository.Setup(x => x.Atualizar(new ContaReceber()));
+            var controller = CreateContaReceberController(_mockContaReceberRepository);
+            var response = controller.ReceberConta(new List<ContaReceberModel>
+            {
+                new ContaReceberModel
+                {
+                    Recebido = true,
+                    Status = "Aberto"
+                }
+            });
+            var data = response.Result.Content.ReadAsAsync<RetornoBase<Exception>>();
+            Assert.AreEqual(HttpStatusCode.BadRequest, response.Result.StatusCode);
+            Assert.AreNotEqual(null, data.Result.ObjetoRetorno);
+            Assert.AreEqual(true, data.Result.TemErros);
+            Assert.AreEqual(Erros.ThereReceivableWithZeroCode, data.Result.Mensagem);
+        }
+
+        [TestMethod]
+        public void TesteReceberContasComCodigoContaReceberCodigo()
+        {
+            _mockContaReceberRepository.Setup(x => x.ObterPorCodigoComVenda(1)).Returns(new ContaReceber { Venda = new Venda() });
+            _mockContaReceberRepository.Setup(x => x.Atualizar(new ContaReceber()));
+            var controller = CreateContaReceberController(_mockContaReceberRepository);
+            var response = controller.ReceberConta(new List<ContaReceberModel>
+            {
+                new ContaReceberModel
+                {
+                    CodigoContaReceber = 1,
+                    Recebido = true,
+                    Status = "Aberto"
+                }
+            });
+            var data = response.Result.Content.ReadAsAsync<RetornoBase<object>>();
+            Assert.AreEqual(HttpStatusCode.OK, response.Result.StatusCode);
+            Assert.AreEqual(null, data.Result.ObjetoRetorno);
+            Assert.AreEqual(false, data.Result.TemErros);
+            Assert.AreEqual(Mensagens.ReturnSuccess, data.Result.Mensagem);
+        }
     }
 }
