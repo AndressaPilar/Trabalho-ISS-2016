@@ -62,5 +62,41 @@ namespace ProjetoArtCouro.Test.TesteApiContaReceber
                         : s.Venda.Cliente.PessoaJuridica.CNPJ;
                 });
         }
+
+        [TestMethod]
+        public void TestePesquisarContaReceberMockContaReceberService()
+        {
+            var mockService = new Mock<IContaReceberService>();
+            mockService.Setup(x => x.PesquisarContaReceber(1, 0, new DateTime(), new DateTime(), 1, string.Empty, string.Empty, 1));
+            var controller = new ContaReceberController(mockService.Object)
+            {
+                Request = new HttpRequestMessage(),
+                Configuration = new HttpConfiguration()
+            };
+            var response = controller.PesquisaContaReceber(new PesquisaContaReceberModel());
+            var data = response.Result.Content.ReadAsAsync<RetornoBase<object>>();
+            Assert.AreEqual(HttpStatusCode.OK, response.Result.StatusCode);
+            Assert.AreEqual(null, data.Result.ObjetoRetorno);
+            Assert.AreEqual(false, data.Result.TemErros);
+            Assert.AreEqual(Mensagens.ReturnSuccess, data.Result.Mensagem);
+        }
+
+        [TestMethod]
+        public void TesteReceberContaMockContaReceberService()
+        {
+            var mockService = new Mock<IContaReceberService>();
+            mockService.Setup(x => x.ReceberContas(new List<ContaReceber>()));
+            var controller = new ContaReceberController(mockService.Object)
+            {
+                Request = new HttpRequestMessage(),
+                Configuration = new HttpConfiguration()
+            };
+            var response = controller.ReceberConta(new List<ContaReceberModel>());
+            var data = response.Result.Content.ReadAsAsync<RetornoBase<object>>();
+            Assert.AreEqual(HttpStatusCode.OK, response.Result.StatusCode);
+            Assert.AreEqual(null, data.Result.ObjetoRetorno);
+            Assert.AreEqual(false, data.Result.TemErros);
+            Assert.AreEqual(Mensagens.ReturnSuccess, data.Result.Mensagem);
+        }
     }
 }
