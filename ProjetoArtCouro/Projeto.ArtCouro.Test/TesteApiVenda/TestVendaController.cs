@@ -405,5 +405,136 @@ namespace ProjetoArtCouro.Test.TesteApiVenda
             Assert.AreEqual(true, data.Result.TemErros);
             Assert.AreEqual(Erros.StatusOfDifferentSalesOpen, data.Result.Mensagem);
         }
+
+        [TestMethod]
+        public void TesteCriarVendaComSomaValorBrutoDiferenteValorTotalBruto()
+        {
+            var controller = CreateVendaController();
+            var response = controller.CriarVenda(new VendaModel()
+            {
+                Status = "Aberto",
+                DataCadastro = string.Format("{0:dd/MM/yyyy H:mm}", DateTime.Now),
+                ValorTotalBruto = "R$ 2,05",
+                ValorDesconto = "R$ 0",
+                ValorTotalLiquido = "R$ 60,00",
+                ClienteId = 1,
+                FormaPagamentoId = 1,
+                CondicaoPagamentoId = 1,
+                ItemVendaModel = new List<ItemVendaModel>
+                {
+                    new ItemVendaModel
+                    {
+                        Codigo = 1,
+                        Descricao = "sdasd",
+                        Quantidade = 1,
+                        PrecoVenda = "R$ 22,00",
+                        ValorBruto = "R$ 30,00",
+                        ValorLiquido = "R$ 30,00"
+                    },
+                    new ItemVendaModel
+                    {
+                        Codigo = 1,
+                        Descricao = "sdasd",
+                        Quantidade = 1,
+                        PrecoVenda = "R$ 22,00",
+                        ValorBruto = "R$ 30,00",
+                        ValorLiquido = "R$ 30,00"
+                    }
+                }
+            });
+            var data = response.Result.Content.ReadAsAsync<RetornoBase<Exception>>();
+            Assert.AreEqual(HttpStatusCode.BadRequest, response.Result.StatusCode);
+            Assert.AreNotEqual(null, data.Result.ObjetoRetorno);
+            Assert.AreEqual(true, data.Result.TemErros);
+            Assert.AreEqual(Erros.SumDoNotMatchTotalCrudeValue, data.Result.Mensagem);
+        }
+
+        [TestMethod]
+        public void TesteCriarVendaComSomaValorLiquidoDiferenteValorTotalLiquido()
+        {
+            var controller = CreateVendaController();
+            var response = controller.CriarVenda(new VendaModel()
+            {
+                Status = "Aberto",
+                DataCadastro = string.Format("{0:dd/MM/yyyy H:mm}", DateTime.Now),
+                ValorTotalBruto = "R$ 60,00",
+                ValorDesconto = "R$ 0",
+                ValorTotalLiquido = "R$ 2,05",
+                ClienteId = 1,
+                FormaPagamentoId = 1,
+                CondicaoPagamentoId = 1,
+                ItemVendaModel = new List<ItemVendaModel>
+                {
+                    new ItemVendaModel
+                    {
+                        Codigo = 1,
+                        Descricao = "sdasd",
+                        Quantidade = 1,
+                        PrecoVenda = "R$ 22,00",
+                        ValorBruto = "R$ 30,00",
+                        ValorLiquido = "R$ 30,00"
+                    },
+                    new ItemVendaModel
+                    {
+                        Codigo = 1,
+                        Descricao = "sdasd",
+                        Quantidade = 1,
+                        PrecoVenda = "R$ 22,00",
+                        ValorBruto = "R$ 30,00",
+                        ValorLiquido = "R$ 30,00"
+                    }
+                }
+            });
+            var data = response.Result.Content.ReadAsAsync<RetornoBase<Exception>>();
+            Assert.AreEqual(HttpStatusCode.BadRequest, response.Result.StatusCode);
+            Assert.AreNotEqual(null, data.Result.ObjetoRetorno);
+            Assert.AreEqual(true, data.Result.TemErros);
+            Assert.AreEqual(Erros.SumDoNotMatchTotalValueLiquid, data.Result.Mensagem);
+        }
+
+        [TestMethod]
+        public void TesteCriarVendaComSomaValorDescontoDiferenteValorTotalDesconto()
+        {
+            var controller = CreateVendaController();
+            var response = controller.CriarVenda(new VendaModel()
+            {
+                Status = "Aberto",
+                DataCadastro = string.Format("{0:dd/MM/yyyy H:mm}", DateTime.Now),
+                ValorTotalBruto = "R$ 60,00",
+                ValorTotalDesconto = "R$ 2,05",
+                ValorTotalLiquido = "R$ 60,00",
+                ClienteId = 1,
+                FormaPagamentoId = 1,
+                CondicaoPagamentoId = 1,
+                ItemVendaModel = new List<ItemVendaModel>
+                {
+                    new ItemVendaModel
+                    {
+                        Codigo = 1,
+                        Descricao = "sdasd",
+                        Quantidade = 1,
+                        PrecoVenda = "R$ 22,00",
+                        ValorBruto = "R$ 30,00",
+                        ValorDesconto = "R$ 1,00",
+                        ValorLiquido = "R$ 30,00"
+                    },
+                    new ItemVendaModel
+                    {
+                        Codigo = 1,
+                        Descricao = "sdasd",
+                        Quantidade = 1,
+                        PrecoVenda = "R$ 22,00",
+                        ValorBruto = "R$ 30,00",
+                        ValorDesconto = "R$ 1,00",
+                        ValorLiquido = "R$ 30,00"
+                    }
+                }
+            });
+            var data = response.Result.Content.ReadAsAsync<RetornoBase<Exception>>();
+            Assert.AreEqual(HttpStatusCode.BadRequest, response.Result.StatusCode);
+            Assert.AreNotEqual(null, data.Result.ObjetoRetorno);
+            Assert.AreEqual(true, data.Result.TemErros);
+            Assert.AreEqual(Erros.SumDoNotMatchTotalValueDiscount, data.Result.Mensagem);
+        }
     }
 }
