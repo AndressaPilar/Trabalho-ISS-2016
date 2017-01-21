@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoArtCouro.Selenium", "ProjetoArtCouro.Selenium\ProjetoArtCouro.Selenium.csproj", "{D6C1CD17-50D1-43D9-8FF9-E7FC69724EBB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Headless|Any CPU = Headless|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6C1CD17-50D1-43D9-8FF9-E7FC69724EBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6C1CD17-50D1-43D9-8FF9-E7FC69724EBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6C1CD17-50D1-43D9-8FF9-E7FC69724EBB}.Headless|Any CPU.ActiveCfg = Headless|Any CPU
+		{D6C1CD17-50D1-43D9-8FF9-E7FC69724EBB}.Headless|Any CPU.Build.0 = Headless|Any CPU
+		{D6C1CD17-50D1-43D9-8FF9-E7FC69724EBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6C1CD17-50D1-43D9-8FF9-E7FC69724EBB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,3 @@
+C:\Users\Andressa Karla\Desktop\AAM.Tests\Treetech.AAM.Specs\obj\Debug\ProjetoArtCouro.Selenium.Specs.csprojResolveAssemblyReference.cache
+C:\Users\Andressa Karla\Desktop\AAM.Tests\Treetech.AAM.Specs\obj\Debug\Treetech.AAM.Specs.dll
+C:\Users\Andressa Karla\Desktop\AAM.Tests\Treetech.AAM.Specs\obj\Debug\Treetech.AAM.Specs.pdb

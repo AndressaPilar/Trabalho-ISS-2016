@@ -407,16 +407,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
-    <Content Include="bin\%24RANDOM_SEED%24" />
-    <Content Include="bin\ApplicationInsights.config" />
-    <None Include="bin\ProjetoArtCouro.Web.dll.config" />
-    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
-    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
-    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
-    <Content Include="img\Sorting icons.psd" />
-    <Content Include="obj\Debug\build.force" />
-    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <Content Include="obj\Debug\ProjetoArtCouro.Web.csprojResolveAssemblyReference.cache" />
     <Content Include="Views\Compra\EditarCompra.cshtml" />
     <Content Include="Views\Compra\NovaCompra.cshtml" />
     <Content Include="Views\Compra\PesquisaCompra.cshtml" />
@@ -450,14 +440,22 @@
     <Content Include="Views\Shared\_MeioComunicacao.cshtml" />
     <Content Include="Views\Shared\_SideMenu.cshtml" />
     <Content Include="_ViewStart.cshtml" />
-    <Content Include="Views\ContaReceber\PesquisaContaReceber.cshtml" />
-    <Content Include="Views\Estoque\PesquisaEstoque.cshtml" />
-    <Content Include="Views\Produto\PesquisaProduto.cshtml" />
-    <Content Include="Views\Venda\EditarVenda.cshtml" />
-    <Content Include="Views\Venda\NovaVenda.cshtml" />
-    <Content Include="Views\Venda\PesquisaVenda.cshtml" />
-    <Content Include="Views\Venda\_VendaView.cshtml" />
-    <Content Include="Views\_ViewStart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="obj\Debug\build.force" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\ProjetoArtCouro.Web.csprojResolveAssemblyReference.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="img\Sorting icons.psd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\%24RANDOM_SEED%24" />
+    <Content Include="bin\ApplicationInsights.config" />
+    <None Include="bin\ProjetoArtCouro.Web.dll.config" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
