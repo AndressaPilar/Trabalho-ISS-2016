@@ -192,6 +192,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\Compras\CompraController.cs" />
+    <Compile Include="Controllers\CondicoesPagamento\CondicaoPagamentoController.cs" />
     <Compile Include="Controllers\ContasPagar\ContaPagarController.cs" />
     <Compile Include="Controllers\FormasPagamento\FormaPagamentoController.cs" />
     <Compile Include="Controllers\Login\LoginController.cs" />
@@ -361,6 +362,7 @@
     <Content Include="js\app\Compra\Compra.js" />
     <Content Include="js\app\Fornecedor\Fornecedor.js" />
     <Content Include="js\app\Funcionario\Funcionario.js" />
+    <Content Include="js\app\Portal.js" />
     <Content Include="js\app\Usuario\Grupo.js" />
     <Content Include="js\app\Venda\Venda.js" />
     <Content Include="js\Enums.js" />

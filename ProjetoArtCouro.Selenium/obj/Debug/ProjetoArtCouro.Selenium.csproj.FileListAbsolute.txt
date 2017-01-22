@@ -32,9 +32,9 @@ C:\Users\Andressa Karla\Desktop\AAM.Tests\Treetech.AAM.Specs\bin\Debug\xunit.exe
 C:\Users\Andressa Karla\Desktop\AAM.Tests\Treetech.AAM.Specs\obj\Debug\Treetech.AAM.Specs.dll
 C:\Users\Andressa Karla\Desktop\AAM.Tests\Treetech.AAM.Specs\obj\Debug\Treetech.AAM.Specs.pdb
 C:\Users\Andressa Karla\Desktop\AAM.Tests\Treetech.AAM.Specs\obj\Debug\ProjetoArtCouro.Selenium.csprojResolveAssemblyReference.cache
+C:\Users\Andressa Karla\Source\Repos\Trabalho-ISS-2016\ProjetoArtCouro.Selenium\bin\Debug\xunit.abstractions.dll
 C:\Users\Andressa Karla\Source\Repos\Trabalho-ISS-2016\ProjetoArtCouro.Selenium\bin\Debug\xunit.runner.visualstudio.testadapter.dll
 C:\Users\Andressa Karla\Source\Repos\Trabalho-ISS-2016\ProjetoArtCouro.Selenium\bin\Debug\xunit.runner.utility.desktop.dll
-C:\Users\Andressa Karla\Source\Repos\Trabalho-ISS-2016\ProjetoArtCouro.Selenium\bin\Debug\xunit.abstractions.dll
 C:\Users\Andressa Karla\Source\Repos\Trabalho-ISS-2016\ProjetoArtCouro.Selenium\bin\Debug\phantomjs.exe
 C:\Users\Andressa Karla\Source\Repos\Trabalho-ISS-2016\ProjetoArtCouro.Selenium\bin\Debug\phantomjs-license.txt
 C:\Users\Andressa Karla\Source\Repos\Trabalho-ISS-2016\ProjetoArtCouro.Selenium\bin\Debug\ProjetoArtCouro.Selenium.dll.config
@@ -55,13 +55,14 @@ C:\Users\Andressa Karla\Source\Repos\Trabalho-ISS-2016\ProjetoArtCouro.Selenium\
 C:\Users\Andressa Karla\Source\Repos\Trabalho-ISS-2016\ProjetoArtCouro.Selenium\bin\Debug\FluentAssertions.Core.pdb
 C:\Users\Andressa Karla\Source\Repos\Trabalho-ISS-2016\ProjetoArtCouro.Selenium\bin\Debug\FluentAssertions.Core.xml
 C:\Users\Andressa Karla\Source\Repos\Trabalho-ISS-2016\ProjetoArtCouro.Selenium\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Andressa Karla\Source\Repos\Trabalho-ISS-2016\ProjetoArtCouro.Selenium\bin\Debug\WebDriver.xml
-C:\Users\Andressa Karla\Source\Repos\Trabalho-ISS-2016\ProjetoArtCouro.Selenium\bin\Debug\WebDriver.Support.xml
 C:\Users\Andressa Karla\Source\Repos\Trabalho-ISS-2016\ProjetoArtCouro.Selenium\bin\Debug\xunit.assert.pdb
 C:\Users\Andressa Karla\Source\Repos\Trabalho-ISS-2016\ProjetoArtCouro.Selenium\bin\Debug\xunit.assert.xml
 C:\Users\Andressa Karla\Source\Repos\Trabalho-ISS-2016\ProjetoArtCouro.Selenium\bin\Debug\xunit.core.pdb
 C:\Users\Andressa Karla\Source\Repos\Trabalho-ISS-2016\ProjetoArtCouro.Selenium\bin\Debug\xunit.core.xml
 C:\Users\Andressa Karla\Source\Repos\Trabalho-ISS-2016\ProjetoArtCouro.Selenium\bin\Debug\xunit.execution.desktop.pdb
 C:\Users\Andressa Karla\Source\Repos\Trabalho-ISS-2016\ProjetoArtCouro.Selenium\bin\Debug\xunit.execution.desktop.xml
+C:\Users\Andressa Karla\Source\Repos\Trabalho-ISS-2016\ProjetoArtCouro.Selenium\obj\Debug\ProjetoArtCouro.Selenium.csprojResolveAssemblyReference.cache
 C:\Users\Andressa Karla\Source\Repos\Trabalho-ISS-2016\ProjetoArtCouro.Selenium\obj\Debug\ProjetoArtCouro.Selenium.dll
 C:\Users\Andressa Karla\Source\Repos\Trabalho-ISS-2016\ProjetoArtCouro.Selenium\obj\Debug\ProjetoArtCouro.Selenium.pdb
+C:\Users\Andressa Karla\Source\Repos\Trabalho-ISS-2016\ProjetoArtCouro.Selenium\bin\Debug\Selenium.WebDriverBackedSelenium.dll
+C:\Users\Andressa Karla\Source\Repos\Trabalho-ISS-2016\ProjetoArtCouro.Selenium\bin\Debug\ThoughtWorks.Selenium.Core.dll

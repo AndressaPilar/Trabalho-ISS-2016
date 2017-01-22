@@ -14,7 +14,7 @@ namespace ProjetoArtCouro.Web.Controllers.ContasReceber
         [CustomAuthorize(Roles = "PesquisaContaReceber")]
         public ActionResult PesquisaContaReceber()
         {
-            ViewBag.Title = Mensagens.BillsToPay;
+            ViewBag.Title = Mensagens.AccountsReceivable;
             ViewBag.StatusContaReceber = new List<LookupModel>
             {
                 new LookupModel

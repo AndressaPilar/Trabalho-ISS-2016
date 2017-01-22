@@ -52,7 +52,7 @@ namespace ProjetoArtCouro.Selenium.Base.FeatureBindings
 
         private static IWebDriver BuildWebDriver()
         {
-            const string remoteUrl = "http://192.168.198.26:4444/wd/hub";
+            const string remoteUrl = "http://192.168.151.2:4444/wd/hub";
 
             EBrowser browser;
             Enum.TryParse(ConfigurationManager.AppSettings.Get("Browser"), true, out browser);

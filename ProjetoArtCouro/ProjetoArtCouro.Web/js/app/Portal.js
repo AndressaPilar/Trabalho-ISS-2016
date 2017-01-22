@@ -241,6 +241,8 @@ $.extend(Portal, {
                         Portal.PreencherAlertaErros(ret.Mensagem, settings.AlertaMensagensSeletor, true);
                     } else {
                         Portal.PreencherAlertaSucesso(ret.Mensagem, settings.AlertaMensagensSeletor, true);
+                        alert(ret.Mensagem);
+                        window.history.back();
                     }
                 }).error(function (ex) {
                     Portal.PreencherAlertaErros(ex.responseJSON.message, settings.AlertaMensagensSeletor, true);

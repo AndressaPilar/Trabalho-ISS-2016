@@ -18,5 +18,32 @@ namespace ProjetoArtCouro.Selenium.Operacoes
         {
             _pageObjects.AcessaFuncionalidadeContaPagar();
         }
+
+        [Given(@"selecione o Status Aberto")]
+        public void DadoSelecioneOStatusAberto()
+        {
+            _pageObjects.SelecionarStatusContaPagar();
+        }
+
+        [Given(@"clique no botão Pesquisar de Conta a Pagar")]
+        public void DadoCliqueNoBotaoPesquisarDeContaAPagar()
+        {
+            _pageObjects.ClicarBotaoPesquisarContaPagar();
+        }
+
+        
+
+        [Given(@"selecione a Conta a Pagar filtrada")]
+        public void DadoSelecioneAContaAPagarFiltrada()
+        {
+           // _pageObjects.SelecionarContaPagarFiltrada();
+        }
+
+        [Given(@"clique no botão Pagar de Conta a Pagar")]
+        public void DadoCliqueNoBotaoPagarDeContaAPagar()
+        {
+           // _pageObjects.ClicarBotaoPagarContaPagar();
+        }
+
     }
 }

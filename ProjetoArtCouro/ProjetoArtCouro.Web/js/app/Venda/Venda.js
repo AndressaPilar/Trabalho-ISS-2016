@@ -132,6 +132,8 @@
                     if ($.isFunction(funcaoSucesso)) {
                         funcaoSucesso.call(this, ret);
                     }
+                    alert(ret.Mensagem);
+                    window.history.back();
                 }
             }).error(function (ex) {
                 if ($.isFunction(funcaoErro)) {

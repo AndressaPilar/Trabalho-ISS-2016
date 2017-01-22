@@ -11,6 +11,7 @@ namespace ProjetoArtCouro.Web.Controllers.CondicoesPagamento
         [CustomAuthorize(Roles = "PesquisaCondicaoPagamento")]
         public ActionResult PesquisaCondicaoPagamento()
         {
+            ViewBag.Title = Mensagens.ConditionsPayments;
             return View();
         }
 
