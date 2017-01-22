@@ -42,10 +42,40 @@
   <ItemGroup>
     <Compile Include="AutoMapper\MeioComunicacaoConverter.cs" />
     <Compile Include="Controllers\ContaReceberController.cs" />
+    <Compile Include="Controllers\Estoques\EstoqueController.cs" />
+    <Compile Include="Controllers\Pagamentos\CondicaoPagamentoController.cs" />
+    <Compile Include="Controllers\Pessoas\ClienteController.cs" />
+    <Compile Include="Controllers\Pessoas\FornecedorController.cs" />
+    <Compile Include="Controllers\Pessoas\FuncionarioController.cs" />
+    <Compile Include="Controllers\Pessoas\PessoaController.cs" />
+    <Compile Include="Controllers\Produtos\ProdutoController.cs" />
+    <Compile Include="Controllers\Vendas\VendaController.cs" />
+    <Compile Include="Extensions\DeflateCompressionAttribute.cs" />
+    <Compile Include="Extensions\InvalidateCacheOutputCustomAttribute.cs" />
+    <Compile Include="Helpers\BaseApiController.cs" />
+    <Compile Include="Helpers\CompressionHelper.cs" />
+    <Compile Include="Helpers\ConvertValue.cs" />
+    <Compile Include="Helpers\UnityResolver.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Pessoas\ClienteController.cs" />
     <Compile Include="Pessoas\PessoaController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\AuthorizationServerProvider.cs" />
     <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="packages.config" />
+    <None Include="Web.config" />
+    <None Include="Web.Debug.config" />
+    <None Include="Web.Release.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

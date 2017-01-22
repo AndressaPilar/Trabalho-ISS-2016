@@ -10,6 +10,7 @@ namespace ProjetoArtCouro.Web.Controllers.FormasPagamento
         [CustomAuthorize(Roles = "PesquisaFormaPagamento")]
         public ActionResult PesquisaFormaPagamento()
         {
+            ViewBag.Title = Mensagens.FormOfPayment;
             return View();
         }
 

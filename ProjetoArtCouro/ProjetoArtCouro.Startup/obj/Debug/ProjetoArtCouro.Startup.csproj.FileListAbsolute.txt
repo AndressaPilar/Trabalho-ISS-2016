@@ -1,0 +1,4 @@
+C:\Users\Andressa Karla\Source\Repos\Trabalho-ISS-2016\ProjetoArtCouro\ProjetoArtCouro.Startup\bin\Debug\ProjetoArtCouro.Startup.dll
+C:\Users\Andressa Karla\Source\Repos\Trabalho-ISS-2016\ProjetoArtCouro\ProjetoArtCouro.Startup\bin\Debug\ProjetoArtCouro.Startup.pdb
+C:\Users\Andressa Karla\Source\Repos\Trabalho-ISS-2016\ProjetoArtCouro\ProjetoArtCouro.Startup\obj\Debug\ProjetoArtCouro.Startup.dll
+C:\Users\Andressa Karla\Source\Repos\Trabalho-ISS-2016\ProjetoArtCouro\ProjetoArtCouro.Startup\obj\Debug\ProjetoArtCouro.Startup.pdb
